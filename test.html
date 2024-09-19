@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articulos</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/themes/themeroller-style.css" />
+    <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.custom.structure.min.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.custom.theme.min.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.inline-png-1.4.5.min.css" />
+    <style>
+      .ui-navbar ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+      .ui-navbar li {
+        flex-grow: 1;
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <!--HOME-->
+    <div data-role="page" id="home" data-theme="a">
+      <div data-role="header">
+        <h1>Control de inventario Articulos</h1>
+      </div>
+      <div role="content" class="ui-content">
+        <a href="#addPage" data-role="button" data-icon="plus">Agregar articulo</a>
+       <ul data-role="listview" id="articleList" data-filter="true">
+        <!--Lista de articulos-->
+       </ul>
+
+      </div>
+      <div data-role="footer">
+        <h4>&copy; 2024</h4>
+      </div>
+    </div>
+
+    <!--Agregar articulos-->
+    <div data-role="page" id="addPage">
+      <div data-role="header">Agregar Articulos</div>
+      <div role="content">
+        <form action="" id="articleForm">
+          <div data-role="fieldcontain">
+            <label for="articleName">Articulo</label>
+            <input type="text" name="articleName" id="articleName" placeholder="Articulo">
+          </div>
+          <div data-role="fieldcontain">
+            <label for="articleQuantity">Cantidad</label>
+            <input type="number" name="articleQuantity" id="articleQuantity" placeholder="Cantidad">
+          </div>
+        </form>
+        <a href="#" id="saveArticleBtn" data-role="button" data-icon="home">Guardar</a>
+        <a href="#home" data-role="button" data-icon="home">Back</a>
+      </div>
+    </div>
+
+    <!--Editar articulos-->
+    <div data-role="page" id="editPage">
+      <div data-role="header">Editar Articulos</div>
+      <div role="content">
+        <form action="" id="editArticleForm">
+          <div data-role="fieldcontain">
+            <label for="editArticleName">Articulo</label>
+            <input type="text" name="editArticleName" id="editArticleName" placeholder="Articulo">
+          </div>
+          <div data-role="fieldcontain">
+            <label for="editArticleQuantity">Cantidad</label>
+            <input type="number" name="editArticleQuantity" id="editArticleQuantity" placeholder="Cantidad">
+        <a href="#" id="updateArticleBtn" data-role="button" data-icon="home">Actualizar</a>
+        </form>
+        <a href="#home" data-role="button" data-icon="home">Back</a>
+      </div>
+    </div>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery.mobile.custom.min.js"></script>
+</body>
+</html>
